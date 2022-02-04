@@ -1,0 +1,20 @@
+<launch>
+  <node pkg="points_preprocessor_usi" type="groundplanfit" name="groundplanfit" output="screen" respawn="false">
+    <param name="sensor_model" type="int" value="16"/>
+    <param name="sensor_height" type="double" value="0.8717"/>
+    <param name="num_seg" type="int" value="3"/>
+    <param name="num_iter" type="int" value="3"/>
+    <param name="num_lpr" type="int" value="20"/>
+    <param name="th_seeds" type="double" value="0.4"/>
+    <param name="th_dist" type="double" value="0.2"/>
+  </node>
+  
+  <node pkg="points_preprocessor_usi" type="scanlinerun" name="scanlinerun" output="screen" respawn="false">
+    <remap from="/all_points" to="/points_no_ground"/>
+    <param name="sensor_model" type="int" value="16"/>
+    <param name="th_run" type="double" value="0.5"/>
+    <param name="th_merge" type="double" value="1.0"/>
+  </node>
+  
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(env PWD)/run_clustering.rviz"/>
+</launch>

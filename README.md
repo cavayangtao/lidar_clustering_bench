@@ -1,2 +1,121 @@
-# lidar_clustering_bench
-LiPC: LiDAR Point Cloud Clustering Benchmark Suite
+# LiPC: LiDAR Point Cloud Clustering Benchmark Suite
+
+LiPC is an benchmark suite of point cloud clustering algorithms based on open software and open datasets. It aims to provide the community with a collection of methods that are easy to use, comparable, and that experimental results are traceable and reproducible. We look forward to the results of other methods using our suite.
+
+## Evaluated methods
+
+1. [adaptive_clustering](adaptive_clustering)
+2. [autoware_clustering](autoware_clustering)
+3. [depth_clustering](depth_clustering)
+4. [euclidean_clustering](euclidean_clustering)
+5. [run_clustering](run_clustering)
+
+## Datasets
+
+In order to draw conclusions on the segmentation precision of the evaluated algorithms, we ran the corresponding open source code on three open datasets and the experimental results are illustrated in [Benchmarking](#Benchmarking). All the three datasets were collected outdoors using three different models of LiDAR, including a Velodyne VLP-16 for the [L-CAS dataset](https://github.com/yzrobot/cloud_annotation_tool), a Velodyne HDL-32E for the [EU Long-term dataset](https://epan-utbm.github.io/utbm_robocar_dataset/), and a Velodyne HDL-64E for the [KITTI dataset](http://www.cvlibs.net/datasets/kitti/). The first one was collected in a parking lot with a stationary robot, which contains two fully labeled pedestrians, for which neither occlusion nor truncation on the samples. The other two datasets were collected in urban road environments with automobile platforms, of which the EU Long-term dataset provides car labels in a roundabout, while the KITTI one includes annotations for pedestrians, cyclists, and various vehicle types.
+
+### Perfection
+
+Tao's wok on the ring number, and many more ...
+
+### Annotation
+
+Although the raw data used are from different datasets, with or without labels, we used the [# L-CAS 3D Point Cloud Annotation Tool](https://github.com/yzrobot/cloud_annotation_tool) to uniformly relabel them to ensure high ground truth accuracy. In particular, we first used [AAA]() method to remove ground point clouds from all data. Then for L-CAS, bla bla, for  EU Long-term bla bla, and for KITTI, bla bla ... 
+
+Each frame's annotation is contained in a text file named as the frame but with extension *.txt*. Each line in the text file represents a label, which has eleven columns with various information:
+
+* Column 1: category (pedestrian, car, etc.)
+* Column 2-4: bounding box centroid (x-y-z)
+* Column 5-7: minimum bound (x-y-z)
+* Column 8-10: maximum bound (x-y-z)
+* Column 11: visibility (0 = visible, 1 = partially visible)
+
+### Download links:
+
+- L-CAS dataset
+  - China:
+  - Other:
+- EU Long-term dataset
+  - China:
+  - Other:
+- KITTI dataset
+  - China:
+  - Other:
+
+## How to run
+
+Please check the README file in each method folder. In general, we assume you have [Ubuntu](https://ubuntu.com/download/desktop) and [ROS](http://wiki.ros.org/Documentation) installed.
+
+## Understand the results
+
+When you run different clustering methods on different datasets, you will see some output like this in your terminal:
+
+`0 1555085894.657905000 -0.218633 -1.01313 -0.302942 0.733374 -0.193833 -0.0957511`
+
+* Column 1: frame number
+* Column 2: timestamp (so you will know how fast your method runs)
+* Column 3-5: minimum bound (x-y-z)
+* Column 6-8: maximum bound (x-y-z)
+
+As some examples, our results can be found [here](results). If you have results about other methods, please don't hesitate to submit them to us.
+
+## Benchmarking
+
+The experiments were carried out on a laptop with an Intel i7-7560U (2.40GHz) processor and 16GB memory (Ubuntu 16.04 64-bit + ROS Kinetic). Scripts to generate IOU and runtime results can be found [here]() and [here]() respectively.
+
+From a [software engineering perspective](http://www.mdpi.com/2218-6581/6/3/21), an explicit experimenter design is essential. Below we give the detailed experimental parameters.
+
+| Approach | Ground removal | Min/Max points | Clustering θ |
+| - | - | - | - |
+| adaptive_clustering | -0.8m/-1.25m/-1.5m | 5/2.2 million | adaptive |
+| autoware_clustering | -0.8m/-1.25m/-1.5m | 5/2.2 million | 0.75 m |
+| depth_clustering | 7&deg; | 5/2.2 million | 10&deg; |
+| euclidean_clustering | -0.8m/-1.25m/-1.5m | 5/2.2 million | 0.75 m |
+| run_clustering | ParamsGPF | 2/2.2 million | ParamsSLR |
+
+*Params GPF = {Nsegs = 3, Niter = 3, NLPR = 20, Thseeds = 0.4m, Thdist = 0.2m}*
+*Params SLR = {Thrun = 0.5m, Thmerge = 1m}*
+
+### Precision
+
+* L-CAS dataset
+
+| Ranking | Approach | IoU |
+| - | - | - |
+| 1 | adaptive_clustering  | 62.38% |
+| 2 | autoware_clustering | 50.68% |
+| 3 | euclidean_clustering | 39.26% |
+| 4 | run_clustering | 37.63% |
+| 5 | depth_clustering | 14.61% |
+
+* EU Long-term dataset
+
+| Ranking | Approach | IoU |
+| - | - | - |
+| 1 | run_clustering  | 35.97% |
+| 2 | autoware_clustering | 34.00% |
+| 3 | adaptive_clustering | 32.99% |
+| 4 | depth_clustering | 28.72% |
+| 5 | euclidean_clustering | 14.78% |
+
+* KITTI dataset
+
+| Ranking | Approach | IoU |
+| - | - | - |
+| 1 | depth_clustering  | 42.69% |
+| 2 | adaptive_clustering | 32.15% |
+| 2 | euclidean_clustering | 32.15% |
+| 2 | autoware_clustering | 32.15% |
+| 3 | run_clustering | 29.25% |
+
+### Runtime
+
+
+
+## Copyright
+
+Please check [here](LICENSE).
+
+## Citation
+
+TODO
