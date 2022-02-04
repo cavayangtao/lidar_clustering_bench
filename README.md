@@ -1,6 +1,6 @@
 # LiPC: LiDAR Point Cloud Clustering Benchmark Suite
 
-LiPC is an benchmark suite of point cloud clustering algorithms based on open software and open datasets. It aims to provide the community with a collection of methods that are easy to use, comparable, and that experimental results are traceable and reproducible. We look forward to the results of other methods using our suite.
+LiPC is a benchmark suite for point cloud clustering algorithms based on open-source software and open datasets. It aims to provide the community with a collection of methods and datasets that are easy to use, comparable, and that experimental results are traceable and reproducible. We look forward to the results of other methods using our suite.
 
 ## Evaluated methods
 
