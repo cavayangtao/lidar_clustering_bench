@@ -74,6 +74,7 @@ From a [software engineering perspective](http://www.mdpi.com/2218-6581/6/3/21),
 | run_clustering | ParamsGPF | 2/2.2 million | ParamsSLR |
 
 *Params GPF = {Nsegs = 3, Niter = 3, NLPR = 20, Thseeds = 0.4m, Thdist = 0.2m}*
+
 *Params SLR = {Thrun = 0.5m, Thmerge = 1m}*
 
 ### Precision
@@ -110,7 +111,17 @@ From a [software engineering perspective](http://www.mdpi.com/2218-6581/6/3/21),
 
 ### Runtime
 
+* L-CAS dataset
 
+![lcas_runtime.png](results/lcas_runtime.png)
+
+* EU Long-term dataset
+
+![eult_runtime.png](results/eult_runtime.png)
+
+* KITTI dataset
+
+![kitti_runtime.png](results/kitti_runtime.png)
 
 ## Copyright
 
