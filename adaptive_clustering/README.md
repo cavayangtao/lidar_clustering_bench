@@ -1,4 +1,4 @@
-adaptive_clustering
+# adaptive_clustering
 
 ROS package of adaptive clustering
 
