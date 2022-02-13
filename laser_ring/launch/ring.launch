@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="laser_ring" type="ring.py" name="ring" output="screen">
+    </node>
+</launch>
