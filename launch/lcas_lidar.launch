@@ -1,0 +1,73 @@
+<launch>
+
+  <!-- <node pkg="points_ground_filter" type="points_ground_filter_node" name="points_ground_filter_node" output="screen">
+    <param name="sub_topic" value="/lcas_velodyne_points"/>
+    <param name="pub_ground_topic" value="/rslidar_points_ground"/>
+    <param name="pub_no_ground_topic" value="/rslidar_points_no_ground"/>
+    
+    <param name="show_points_size" value="false"/>
+    
+    <param name="sensor_height" value="0.87"/>
+    <param name="radial_divider_angle" value="0.2"/>
+    <param name="concentric_divider_distance" value="0.1"/>
+    
+    <param name="local_threshold_ratio" value="0.01"/>
+    <param name="min_local_threshold" value="0.05"/>
+    <param name="general_threshold_ratio" value="0.9"/>
+    <param name="min_general_threshold" value="0.15"/>
+    <param name="reclass_distance" value="0.2"/>
+    
+    <param name="ground_filter_mode" value="true"/>
+    <param name="ground_meank" value="10"/>
+    <param name="ground_stdmul" value="1.0"/>
+    
+    <param name="no_ground_filter_mode" value="true"/>
+    <param name="no_ground_meank" value="10"/>
+    <param name="no_ground_stdmul" value="1.0"/>        
+  </node> -->
+
+  <!-- adaptive_clustering -->
+  <node pkg="adaptive_clustering" name="adaptive_clustering" type="adaptive_clustering">
+   <param name="print_fps" value="false"/>
+  </node>  
+
+  <!-- autoware_clustering-->
+  <!-- <arg name="use_vector_map" default="false" />
+  <arg name="wayarea_gridmap_layer" default="wayarea" />
+
+  <node pkg="lidar_euclidean_cluster_detect" type="lidar_euclidean_cluster_detect"
+        name="lidar_euclidean_cluster_detect" output="screen">
+    <rosparam command="load" file="$(find lidar_euclidean_cluster_detect)/config/params.yaml"/>
+  </node> -->
+
+  <!-- euclidean_clustering -->
+  <!-- <node pkg="euclidean_clustering" name="euclidean_clustering" type="euclidean_clustering">
+    <param name="print_fps" value="false"/>
+  </node> -->
+
+  <!-- run_clustering-->
+  <!-- <node pkg="points_preprocessor_usi" type="groundplanfit" name="groundplanfit" output="screen" respawn="false">
+    <param name="sensor_model" type="int" value="16"/>
+    <param name="sensor_height" type="double" value="0.8717"/>
+    <param name="num_seg" type="int" value="3"/>
+    <param name="num_iter" type="int" value="3"/>
+    <param name="num_lpr" type="int" value="20"/>
+    <param name="th_seeds" type="double" value="0.4"/>
+    <param name="th_dist" type="double" value="0.2"/>
+  </node>
+  
+  <node pkg="points_preprocessor_usi" type="scanlinerun" name="scanlinerun" output="screen" respawn="false">
+    <remap from="/all_points" to="/points_no_ground"/>
+    <param name="sensor_model" type="int" value="16"/>
+    <param name="th_run" type="double" value="0.5"/>
+    <param name="th_merge" type="double" value="1.0"/>
+  </node> -->
+
+  <!-- depth_clustering-->
+  <!-- <node pkg="depth_clustering" name="show_objects_node" type="show_objects_node">
+    <param name="num_beams" value="16"/>
+  </node>  -->
+
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(env PWD)/utbm_robocar_dataset.rviz"/> -->
+</launch>
+

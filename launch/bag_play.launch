@@ -1,0 +1,32 @@
+<launch>
+
+  <!-- rosbag play -->
+  <arg name="bag"/>
+  <param name="use_sim_time" value="true"/>
+  <node pkg="rosbag" type="play" name="rosbag_play" args="-r 0.05 --clock $(arg bag)" required="true">
+  <remap from="/kitti_ros/velodyne_points" to="/velodyne_points"/>
+  </node>
+   
+  <!-- Velodyne VLP-16-->
+  <!-- <node pkg="nodelet" type="nodelet" name="velodyne_nodelet_manager" args="manager" output="screen"/>
+  <node pkg="nodelet" type="nodelet" name="cloud_nodelet" args="load velodyne_pointcloud/CloudNodelet velodyne_nodelet_manager" output="screen">
+   <param name="calibration" value="$(find velodyne_pointcloud)/params/VLP16db.yaml"/>
+   <remap from="/velodyne_points" to="/lcas_velodyne_points"/>
+  </node> -->
+
+    <!-- Velodyne HDL-32E: left -->
+  <!-- <group ns="hdl32e_left">
+    <node pkg="nodelet" type="nodelet" name="velodyne_left_nodelet_manager" args="manager" output="screen"/>
+    <node pkg="nodelet" type="nodelet" name="cloud_nodelet" args="load velodyne_pointcloud/CloudNodelet velodyne_left_nodelet_manager" output="screen">
+      <param name="calibration" value="$(find velodyne_pointcloud)/params/32db.yaml"/>
+      <param name="min_range" value="0.4"/>
+      <param name="max_range" value="130.0"/>
+      <param name="view_direction" value="3.1415926"/>
+      <param name="view_width" value="5.4769"/>
+      <remap from="/hdl32e_left/velodyne_points" to="/velodyne_points"/>
+    </node>
+  </group> -->
+
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(env PWD)/utbm_robocar_dataset.rviz"/> -->
+</launch>
+
