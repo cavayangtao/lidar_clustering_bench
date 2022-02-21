@@ -12,7 +12,7 @@ LiPC is a benchmark suite for point cloud clustering algorithms based on open-so
 
 ## Datasets
 
-We ran the above open-source methods on three open datasets and the experimental results are illustrated in [Benchmarking](#Benchmarking). All the three datasets were collected outdoors using three different LiDARs including, a Velodyne VLP-16 for the [L-CAS dataset](https://github.com/yzrobot/cloud_annotation_tool), a Velodyne HDL-32E for the [EU Long-term dataset](https://epan-utbm.github.io/utbm_robocar_dataset/), and a Velodyne HDL-64E for the [KITTI dataset](http://www.cvlibs.net/datasets/kitti/). The first one was collected in a parking lot with a stationary robot, which contains two fully labeled pedestrians, for which neither occlusion nor truncation on the samples. The other two datasets were collected in urban road environments with automobile platforms, of which the EU Long-term dataset provides car labels in a roundabout, while the KITTI one includes annotations various vehicle types.
+We ran the above open-source methods on three open datasets and the experimental results are illustrated in [Benchmarking](#Benchmarking). All the three datasets were collected outdoors using three different LiDARs including, a Velodyne VLP-16 for the [L-CAS dataset](https://github.com/yzrobot/cloud_annotation_tool), a Velodyne HDL-32E for the [EU Long-term dataset](https://epan-utbm.github.io/utbm_robocar_dataset/), and a Velodyne HDL-64E for the [KITTI dataset](http://www.cvlibs.net/datasets/kitti/). The first one was collected in a parking lot with a stationary robot, which contains two fully labeled pedestrians, for which neither occlusion nor truncation on the samples. The other two datasets were collected in urban road environments with automobile platforms, of which the EU Long-term dataset provides car labels in a roundabout, while the KITTI one includes annotations of various vehicle types.
 
 ### Perfection
 
@@ -48,7 +48,7 @@ Each frame's annotation is contained in a text file named as the frame but with 
 
 ## How to run
 
-Please check the README file in each method folder. In general, we assume you have [Ubuntu](https://ubuntu.com/download/desktop) and [ROS](http://wiki.ros.org/Documentation) installed.
+Please check the README file in each method folder. We also provide the [launch files](launch) for easy testing. In general, we assume you have [Ubuntu](https://ubuntu.com/download/desktop) and [ROS](http://wiki.ros.org/Documentation) installed.
 
 ## Understand the results
 
