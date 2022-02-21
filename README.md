@@ -22,7 +22,7 @@ We also roughly estimated the [ring_number](laser_ring) (corresponding to the sc
 
 ### Annotation
 
-Although the raw data used are from different datasets, with or without labels, we used the [# L-CAS 3D Point Cloud Annotation Tool](https://github.com/yzrobot/cloud_annotation_tool) to uniformly relabel them to ensure high ground truth accuracy. In particular, we first used [Ray ground filter](points_ground_filter) method to remove ground point clouds from all data. The main idea of ray ground filter is to segment the ground by calculating the height change of a point in the angular differential region in the x-y plane and setting the threshold.
+Although the raw data used are from different datasets, with or without labels, we used the [# L-CAS 3D Point Cloud Annotation Tool](https://github.com/yzrobot/cloud_annotation_tool) to uniformly relabel them to ensure high ground truth accuracy. In particular, we first used [ray ground filter](points_ground_filter) method to remove ground point clouds from all data. The main idea of ray ground filter is to segment the ground by calculating the height change of a point in the angular differential region in the x-y plane and setting the threshold.
 
 Since different surfaces of a vehicle, like the car body, the window glass, and the front grill, have different reflectivity for a laser, the point cloud on the vehicle is usually incomplete and shown as separated parts. Nevertheless, for EU Long-term and KITTI datasets, we assigned a single bounding box containing all the points of the same vehicle.
 
