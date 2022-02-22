@@ -8,7 +8,7 @@ roslaunch package_name bag_play.launch bag:=bag_path
 roslaunch package_name eult_clustering.launch
 ```
 
-For rhe depth clustering:
+For the depth clustering only:
 ```
 roslaunch package_name bag_play.launch  bag:=bag_path
 rosrun depth_clustering show_objects_node --num_beams 32
