@@ -138,7 +138,7 @@ if __name__ =='__main__':
     cluster_file_path = './iou/lcas_results/depth_clustering_lcas.txt'#算法输出文件的地址
     # all_frame_path = './iou/utbm_points' #所有点云数据
     # label_file_path = './iou/utbm_labels_car/' #标注数据的文件夹地址
-    # cluster_file_path = './iou/utbm_results/depth_clustering_eult.txt'#算法输出文件的地址
+    # cluster_file_path = './iou/utbm_results/depth_clustering_utbm.txt'#算法输出文件的地址
     # all_frame_path = './iou/kitti_points_noground' #所有点云数据
     # label_file_path = './iou/kitti_labels_new/' #标注数据的文件夹地址
     # cluster_file_path = './iou/kitti_results/depth_clustering_kitti.txt'#算法输出文件的地址

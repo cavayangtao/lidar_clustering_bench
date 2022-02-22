@@ -127,7 +127,7 @@ if __name__ =='__main__':
     # label_file_path = './iou/lcas_labels/' #标注数据的文件夹地址
     # cluster_file_path = './iou/lcas_results/run_clustering_lcas.txt'#算法输出文件的地址
     label_file_path = './iou/utbm_labels_car/' #标注数据的文件夹地址
-    cluster_file_path = './iou/utbm_results/euclidean_clustering_eult.txt'#算法输出文件的地址
+    cluster_file_path = './iou/utbm_results/euclidean_clustering_utbm.txt'#算法输出文件的地址
     # label_file_path = './iou/kitti_labels_new/' #标注数据的文件夹地址
     # cluster_file_path = './iou/kitti_results/adaptive_clustering_kitti.txt'#算法输出文件的地址
     IOU_3D = result()
