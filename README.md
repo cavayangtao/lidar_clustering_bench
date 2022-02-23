@@ -133,7 +133,7 @@ Please check [here](LICENSE).
 
 ## Citation
 
-    @artical{yt22reviw,
+    @artical{yt22review,
         author       = {Tao Yang, You Li, Cheng Zhao, Dexin Yao, Guanyin Chen, Li Sun, Tomas Krajnik, Zhi Yan},
         title        = {3D ToF LiDAR in Mobile Robotics: A Review},
         booktitle    = {arXiv:2202.11025},
