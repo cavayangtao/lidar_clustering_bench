@@ -136,5 +136,6 @@ Please check [here](LICENSE).
     @artical{yt22review,
         author       = {Tao Yang, You Li, Cheng Zhao, Dexin Yao, Guanyin Chen, Li Sun, Tomas Krajnik, Zhi Yan},
         title        = {3D ToF LiDAR in Mobile Robotics: A Review},
-        booktitle    = {arXiv:2202.11025},
+        journal      = {arXiv preprint arXiv:2202.11025},
+        year         = {2022}
         }
