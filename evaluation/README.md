@@ -1,6 +1,6 @@
 # evaluation code
 
-clustering_clean.py is used to clean the output results from adaptive clustering, euclidean clustering, and run clustering when the input point cloud misses "intensity" of "ring".
+clustering_clean.py is used to clean the output results from adaptive clustering, euclidean clustering, and run clustering when the input point cloud misses "intensity" or "ring".
 
 time_clean.py is used to format the output results of runtime of depth clustering.
 
