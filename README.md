@@ -77,9 +77,9 @@ From a [software engineering perspective](http://www.mdpi.com/2218-6581/6/3/21),
 | euclidean_clustering | -0.8m/-1.25m/-1.5m | 5/2.2 million | 0.75 m |
 | run_clustering | ParamsGPF | 2/2.2 million | ParamsSLR |
 
-*Params GPF = {Nsegs = 3, Niter = 3, NLPR = 20, Thseeds = 0.4m, Thdist = 0.2m}*
+*ParamsGPF = {Nsegs = 3, Niter = 3, NLPR = 20, Thseeds = 0.4m, Thdist = 0.2m}*
 
-*Params SLR = {Thrun = 0.5m, Thmerge = 1m}*
+*ParamsSLR = {Thrun = 0.5m, Thmerge = 1m}*
 
 ### Precision
 
@@ -133,9 +133,17 @@ Please check [here](LICENSE).
 
 ## Citation
 
-    @artical{yt22review,
-        author       = {Tao Yang, You Li, Cheng Zhao, Dexin Yao, Guanyin Chen, Li Sun, Tomas Krajnik, Zhi Yan},
-        title        = {3D ToF LiDAR in Mobile Robotics: A Review},
-        journal      = {arXiv preprint arXiv:2202.11025},
-        year         = {2022}
-        }
+If you are considering using this repository, please reference the following:
+
+```
+@article{yt22review,
+   author  = {Tao Yang and You Li and Cheng Zhao and Dexin Yao and Guanyin Chen and Li Sun and Tomas Krajnik and Zhi Yan},
+   title   = {{3D ToF LiDAR} in Mobile Robotics: A Review},
+   journal = {CoRR},
+   volume = {abs/2202.11025},
+   year = {2022},
+   url = {http://arxiv.org/abs/2202.11025},
+   archivePrefix = {arXiv},
+   eprint = {2202.11025}
+}
+```
