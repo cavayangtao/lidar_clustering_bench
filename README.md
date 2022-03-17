@@ -2,6 +2,8 @@
 
 LiPC is a benchmark suite for point cloud clustering algorithms based on open-source software and open datasets. It aims to provide the community with a collection of methods and datasets that are easy to use, comparable, and that experimental results are traceable and reproducible. We look forward to the results of other methods using our suite.
 
+![splash.jpg](splash.jpg)
+
 ## Evaluated methods
 
 1. [adaptive_clustering](adaptive_clustering)
