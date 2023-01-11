@@ -110,10 +110,10 @@ From a [software engineering perspective](http://www.mdpi.com/2218-6581/6/3/21),
 | Ranking | Approach | IoU |
 | - | - | - |
 | 1 | depth_clustering  | 42.69% |
-| 2 | adaptive_clustering | 32.15% |
-| 2 | autoware_clustering | 32.15% |
-| 3 | euclidean_clustering | 30.63% |
-| 4 | run_clustering | 29.25% |
+| 2 | adaptive_clustering | 33.24% |
+| 3 | autoware_clustering | 32.15% |
+| 4 | euclidean_clustering | 30.63% |
+| 5 | run_clustering | 29.25% |
 
 ### Runtime
 
