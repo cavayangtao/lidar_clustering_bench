@@ -18,7 +18,7 @@ We ran the above open-source methods on three open datasets and the experimental
 
 ### Perfection
 
-Instead of counting how many clusters were correctly segmented, more precisely, we calculate the 3D Intersection over Union (IoU) between the clustering box and the ground truth box. The maximum IoU of a ground truth box is first calculated, and then the average IoU of all the ground truth boxes is taken as the final result. As  we focuses on the clustering precision evaluation without considering the frame loss caused by running speed, we play the point cloud data at a very slow speed to ensure that the algorithms can output almost every frame's clustering results.
+Instead of counting how many clusters were correctly segmented, more precisely, we calculate the 3D Intersection over Union (IoU) between the clustering box and the ground truth box. The maximum IoU of a ground truth box is first calculated, and then the average IoU of all the ground truth boxes is taken as the final result. As we focuses on the clustering precision evaluation without considering the frame loss caused by running speed, we play the point cloud data at a very slow speed to ensure that the algorithms can output almost every frame's clustering results.
 
 We also roughly estimated the [ring_number](laser_ring) (corresponding to the scan layer of LiDAR) missed in the point cloud data of KITTI by calculating the vertical angle of a laser to meet the operating requirements of run clustering and depth clustering.
 
@@ -67,7 +67,7 @@ As some examples, our results can be found [here](results). If you have results 
 
 ## Benchmarking
 
-The experiments were carried out with Ubuntu 18.04 LTS (64-bit) and ROS Melodic, with an Intel i7-7700HQ processor (only one core is used), 16 GB memory, and without GPU processin. Scripts to generate IOU and runtime results can be found [here](evaluation).
+The experiments were carried out with Ubuntu 18.04 LTS (64-bit) and ROS Melodic, with an Intel i7-7700HQ processor (only one core is used), 16 GB memory, and without GPU processing. Scripts to generate IOU and runtime results can be found [here](evaluation).
 
 From a [software engineering perspective](http://www.mdpi.com/2218-6581/6/3/21), an explicit experimenter design is essential. Below we give the detailed experimental parameters.
 
