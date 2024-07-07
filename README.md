@@ -139,13 +139,10 @@ If you are considering using this repository, please reference the following:
 
 ```
 @article{yt22review,
-   author  = {Tao Yang and You Li and Cheng Zhao and Dexin Yao and Guanyin Chen and Li Sun and Tomas Krajnik and Zhi Yan},
-   title   = {{3D ToF LiDAR} in Mobile Robotics: A Review},
-   journal = {CoRR},
-   volume = {abs/2202.11025},
-   year = {2022},
-   url = {http://arxiv.org/abs/2202.11025},
-   archivePrefix = {arXiv},
-   eprint = {2202.11025}
+author = {Yang, Tao and Hu, Jinwen and Li, You and Zhao, Cheng and Sun, Li and Krajnik, Tomas and Yan, Zhi},
+title = {3D ToF LiDAR for Mobile Robotics in Harsh Environments: A Review},
+journal = {Unmanned Systems},
+year = {2024},
+doi = {10.1142/S230138502530001X},
 }
 ```
