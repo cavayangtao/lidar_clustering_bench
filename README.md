@@ -138,7 +138,7 @@ Please check [here](LICENSE).
 If you are considering using this repository, please reference the following:
 
 ```
-@article{yt22review,
+@article{yt24review,
 author = {Yang, Tao and Hu, Jinwen and Li, You and Zhao, Cheng and Sun, Li and Krajnik, Tomas and Yan, Zhi},
 title = {3D ToF LiDAR for Mobile Robotics in Harsh Environments: A Review},
 journal = {Unmanned Systems},
